@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/kmi-robots/json-schemas/master/geometry_msgs/Pose.schema.json",
+  "title": "geometry_msgs/Pose",
+  "description": "A representation of pose in free space, composed of position and orientation",
+  "type": "object",
+  "properties": {
+   "position": {
+        "$ref": "http://wiki.ros.org/geometry_msgs/Point.schema.json"
+    },
+    "orientation": {
+        "$ref": "http://wiki.ros.org/geometry_msgs/Quaternion.schema.json"
+    }
+  },
+  "required": [ "position", "orientation" ]
+}

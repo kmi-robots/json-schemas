@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/kmi-robots/json-schemas/master/geometry_msgs/Point.schema.json",
+  "title": "geometry_msgs/Point",
+  "description": "This contains the position of a point in free space",
+  "type": "object",
+  "properties": {
+    "x": {
+      "type": "number"
+    },
+    "y": {
+      "type": "number"
+    },
+    "z": {
+      "type": "number"
+    }
+  },
+  "required": [ "x", "y", "z" ]
+}
