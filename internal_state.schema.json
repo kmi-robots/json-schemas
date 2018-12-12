@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/InternalState",
+    "InternalState": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Parameters": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "a": {
+              "type": "integer"
+            },
+            "b": {
+              "type": "integer"
+            },
+            "c": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "c"
+          ],
+          "title": "Parameters"
+        },
+        "Variables": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "d": {
+              "type": "integer"
+            },
+            "e": {
+              "type": "string"
+            },
+            "f": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          },
+          "required": [
+            "d",
+            "e",
+            "f"
+          ],
+          "title": "Variables"
+        }
+      },
+      "title": "InternalState"
+    }
+  }

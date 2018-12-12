@@ -1,0 +1,5 @@
+{
+  "size": 100,
+  "mvector": { "type": "std:vector<double>", "include": "vector"},
+  "mmap": { "type": "std:map<double, double>", "include": "map"}
+}

@@ -1,0 +1,92 @@
+{
+  "definitions": {
+    "point": {
+      "title": "geometry_msgs/Point",
+      "description": "This contains the position of a point in free space",
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ]},
+  "quaternion": {
+    "title": "geometry_msgs/Quaternion",
+    "description": "This represents an orientation in free space in quaternion form",
+    "type": "object",
+    "properties": {
+      "x": {
+        "type": "number"
+      },
+      "y": {
+        "type": "number"
+      },
+      "z": {
+        "type": "number"
+      },
+      "w": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "x",
+      "y",
+      "z",
+      "w"
+    ]
+  },
+  "pose": {
+    "title": "geometry_msgs/Pose",
+    "description": "A representation of pose in free space, composed of position and orientation",
+    "type": "object",
+    "properties": {
+      "position": {
+        "$ref": "#/definitions/point"
+      },
+      "orientation": {
+        "$ref": "#/definitions/quaternion"
+      }
+    },
+    "required": [
+      "position",
+      "orientation"
+    ]
+  }
+},
+  "allOf": [
+    { "$ref": "#/definitions/pose" },
+    {"properties": {
+      "position": { 
+        "properties": {
+          "x": { "minimum": 1 }
+        }
+      }
+    }
+    }
+  ]
+}
+
+
+{
+  "position": {
+    "x": 2.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "orientation": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0,
+    "w": 1.0
+  }
+}

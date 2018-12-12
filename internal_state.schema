@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$ref": "#/InternalState",
+    "InternalState": {
+        "Parameters": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "a": {
+                    "type": "integer"
+                },
+                "b": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "a",
+                "b"
+            ],
+            "title": "Parameters"
+        },
+        "Variables": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "size": {
+                    "type": "integer"
+                },
+                "mvector": {
+                    "$ref": "#/definitions/complex"
+                },
+                "mmap": {
+                    "$ref": "#/definitions/complex"
+                }
+            },
+            "required": [
+                "mmap",
+                "mvector",
+                "size"
+            ],
+            "title": "Variables"
+        },
+        "complex": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "include": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "include",
+                "type"
+            ],
+            "title": "complex"
+        }
+    }
+}
